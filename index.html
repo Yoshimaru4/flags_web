@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #231F20;
+      }
+      #unity-canvas {
+        aspect-ratio: 10/21; /* Set the aspect ratio to 1080x1920 */
+        width: 100%;
+        max-width: 50vh; /* Set the maximum width to the screen height */
+        height: auto;
+        background-color: #231F20;
+      }
+    </style>
+  </head>
+    <canvas id="unity-canvas"></canvas>
+    <script src="Build/FlagClicker_WebGL_Build_1.1.loader.js"></script>
+    <script>
+      if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+        // Mobile device style: fill the whole browser client area with the game canvas:
+        var meta = document.createElement('meta');
+        meta.name = 'viewport';
+        meta.content = 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes';
+        document.getElementsByTagName('head')[0].appendChild(meta);
+      }
+
+      createUnityInstance(document.querySelector("#unity-canvas"), {
+        dataUrl: "Build/FlagClicker_WebGL_Build_1.1.data",
+        frameworkUrl: "Build/FlagClicker_WebGL_Build_1.1.framework.js",
+        codeUrl: "Build/FlagClicker_WebGL_Build_1.1.wasm",
+        streamingAssetsUrl: "StreamingAssets",
+        companyName: "DefaultCompany",
+        productName: "ProvoslavnyClicker",
+        productVersion: "1.0",
+        // matchWebGLToCanvasSize: false, // Uncomment this to separately control WebGL canvas render size and DOM element
+        // devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
+      });
+    </script>
+</html>
