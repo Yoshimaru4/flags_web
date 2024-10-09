@@ -24,27 +24,5 @@
     </style>
     <script src="https://telegram.org/js/telegram-web-app.js?2"></script>
   </head>
-    <canvas id="unity-canvas"></canvas>
-    <script src="Build/FlagClicker_WebGL_Build_1.1.loader.js"></script>
-    <script>
-      if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
-        // Mobile device style: fill the whole browser client area with the game canvas:
-        var meta = document.createElement('meta');
-        meta.name = 'viewport';
-        meta.content = 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes';
-        document.getElementsByTagName('head')[0].appendChild(meta);
-      }
-
-      createUnityInstance(document.querySelector("#unity-canvas"), {
-        dataUrl: "Build/FlagClicker_WebGL_Build_1.1.data",
-        frameworkUrl: "Build/FlagClicker_WebGL_Build_1.1.framework.js",
-        codeUrl: "Build/FlagClicker_WebGL_Build_1.1.wasm",
-        streamingAssetsUrl: "StreamingAssets",
-        companyName: "DefaultCompany",
-        productName: "ProvoslavnyClicker",
-        productVersion: "1.0",
-        // matchWebGLToCanvasSize: false, // Uncomment this to separately control WebGL canvas render size and DOM element
-        // devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
-      });
-    </script>
+<script src="https://forms.yandex.ru/_static/embed.js"></script><iframe src="https://forms.yandex.ru/cloud/6706b55a068ff02f5c39aa08/?iframe=1" frameborder="0" name="ya-form-6706b55a068ff02f5c39aa08" width="650"></iframe>
 </html>
